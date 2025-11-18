@@ -1,0 +1,108 @@
+/* --- การตั้งค่าพื้นฐาน --- */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* ฟอนต์ที่ดูเป็นมิตร */
+    background-color: #ffeef8; /* พื้นหลังสีชมพูอ่อนมาก */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- เครื่องคิดเลขหลัก --- */
+.calculator {
+    border: none;
+    border-radius: 20px; /* ขอบโค้งมนมาก */
+    width: 350px; /* ลดขนาดเล็กน้อยเพื่อให้ดูน่ารัก */
+    overflow: hidden; /* ซ่อนส่วนเกินของขอบโค้งมน */
+    box-shadow: 0 10px 30px rgba(255, 100, 150, 0.4); /* เงาสีชมพูอ่อนๆ */
+}
+
+/* --- หน้าจอแสดงผล --- */
+.calculator-screen {
+    width: 100%;
+    height: 100px;
+    background-color: #f7f3ff; /* สีม่วงอ่อนมาก / ขาวอมม่วง */
+    color: #4a287a; /* สีตัวอักษรม่วงเข้ม */
+    text-align: right;
+    font-size: 5rem;
+    border: none;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* --- ปุ่มกด --- */
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+    padding: 10px;
+    background-color: #ffffff; /* พื้นหลังส่วนปุ่มสีขาว */
+}
+
+.calculator-keys button {
+    height: 65px; /* ลดความสูงเล็กน้อย */
+    background-color: #f0f8ff; /* ปุ่มสีฟ้าอ่อนมาก (AliceBlue) */
+    border: none;
+    border-radius: 15px; /* ทำให้ปุ่มโค้งมน */
+    font-size: 2.8rem;
+    color: #555555;
+    cursor: pointer;
+    transition: all 0.1s ease; /* เพิ่มแอนิเมชันตอนโฮเวอร์ */
+    box-shadow: 0 4px 0 #cccccc; /* เงาด้านล่างปุ่ม */
+}
+
+.calculator-keys button:active {
+    box-shadow: 0 1px 0 #cccccc;
+    transform: translateY(3px); /* ทำให้ปุ่มยุบลงเมื่อกด */
+}
+
+/* --- ปุ่มตัวดำเนินการ (Operators) --- */
+.operator {
+    background-color: #ffb6c1; /* สีชมพูอ่อน (LightPink) */
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 4px 0 #d996a0;
+}
+
+.operator:active {
+    box-shadow: 0 1px 0 #d996a0;
+}
+
+/* --- ปุ่ม AC (All Clear) --- */
+.all-clear {
+    background-color: #a8e0a8; /* สีเขียวอ่อน (Pastel Green) */
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 4px 0 #8dc08d;
+}
+
+.all-clear:active {
+    box-shadow: 0 1px 0 #8dc08d;
+}
+
+/* --- ปุ่มเท่ากับ (=) --- */
+.equal-sign {
+    background-color: #ffd700; /* สีเหลืองทอง (Gold) สดใส */
+    color: #4a287a; /* สีม่วงเข้ม */
+    font-weight: bold;
+    grid-column: 4 / 5;
+    height: 138px; /* ปรับความสูงให้เข้ากับ grid gap ใหม่ */
+    box-shadow: 0 4px 0 #d9b500;
+}
+
+.equal-sign:active {
+    box-shadow: 0 1px 0 #d9b500;
+}
