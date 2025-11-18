@@ -1,3 +1,4 @@
+
 /* --- การตั้งค่าพื้นฐาน --- */
 html {
     font-size: 62.5%;
@@ -20,8 +21,12 @@ body {
 }
 
 h1 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
     text-align: center; /* จัดให้อยู่กึ่งกลางหน้าจอ */
-    font-size: 2em;      /* กำหนดขนาดตัวอักษร (ใหญ่กว่าปกติ 2 เท่า) */
+    font-size: 3em;      /* กำหนดขนาดตัวอักษร (ใหญ่กว่าปกติ 2 เท่า) */
     margin-top: 20px;    /* กำหนดระยะห่างด้านบน */
     margin-bottom: 20px; /* กำหนดระยะห่างด้านล่าง */
     color: #333;         /* กำหนดสีข้อความ (สีเทาเข้ม) */
